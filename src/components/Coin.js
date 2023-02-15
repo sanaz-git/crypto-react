@@ -15,7 +15,7 @@ const Coin = ({ name, image, symbol, price, marketCap, priceChange }) => {
           priceChange > 0 ? styles.greenPriceChange : styles.redPriceChange
         }
       >
-        {priceChange.toFixed(2)}
+        {Math.round(priceChange * 100) / 100}
       </span>
       <span className={styles.marketCap}>$ {marketCap.toLocaleString()}</span>
     </div>
